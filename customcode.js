@@ -51,6 +51,14 @@ var errorMsg = "";
 			return imgURL
 		}
 		
+		function makeInput() {
+			var i;
+			var adet = $('*[data-default^="fotoUpload"]').lenght;
+			for (i=1;i<adet;i++) {
+				$('#CustomForm').append('<input type="file" id="fotoUpload'+i+'" class="fotoyukleinput" accept="image/*"><label for="fotoUpload'+i+'" id="fLabel'+i+'" class="uploadButton"><i class="fas fa-camera uploadicon"></i>'+i+'. Fotoğraf Yükle</label>');
+			}
+		}
+		
 $(function(){
 	
 	$('.fotoyukleinput').change(function(){
@@ -96,7 +104,7 @@ $(function(){
 			promise.then(
 				function(data) {
 					$('label[for='+inputID+']').html('<i class="fas fa-check uploadicon"></i>Fotoğraf yüklendi.');
-					getPhoto(photoKey)
+					$('*[data-default="'+inputID+'"]').attr("src", getPhoto(photoKey));
 				},
 				function(err) {
 					$('#'+inputID).prop( "disabled", false );

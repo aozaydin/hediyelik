@@ -53,7 +53,7 @@ var errorMsg = "";
 		
 		function makeInput() {
 			var i;
-			var adet = $('*[data-default^="fotoUpload"]').lenght;
+			var adet = $('*[data-default^="fotoUpload"]').length;
 			for (i=1;i<adet;i++) {
 				$('#CustomForm').append('<input type="file" id="fotoUpload'+i+'" class="fotoyukleinput" accept="image/*"><label for="fotoUpload'+i+'" id="fLabel'+i+'" class="uploadButton"><i class="fas fa-camera uploadicon"></i>'+i+'. Fotoğraf Yükle</label>');
 			}
@@ -61,6 +61,7 @@ var errorMsg = "";
 		
 $(function(){
 	
+	makeInput();
 	$('.fotoyukleinput').change(function(){
 		
 		var files = this.files;

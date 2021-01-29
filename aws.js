@@ -1,0 +1,1 @@
+var bucketName="nilhediye",bucketRegion="eu-central-1",IdentityPoolId="eu-central-1:350fb4b8-a162-4e28-9a9c-e361f3703a8c";AWS.config.update({region:bucketRegion,credentials:new AWS.CognitoIdentityCredentials({IdentityPoolId:IdentityPoolId})});var s3=new AWS.S3({apiVersion:"2006-03-01",params:{Bucket:bucketName}});

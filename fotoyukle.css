@@ -1,0 +1,48 @@
+.fotoyukleinput {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.fotoyukleinput + label {
+    font-size: 12px;
+    font-weight: 700;
+	padding:10px;
+    display: inline-block;
+	text-align: center;
+}
+
+.fotoyukleinput:focus + label,
+.fotoyukleinput + label:hover {
+    color: #fff;
+    background-color: #ae1500;
+}
+.fotoyukleinput + label {
+	cursor: pointer; /* "hand" cursor */
+}
+.fotoyukleinput:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.fotoyukleinput + label * {
+	pointer-events: none;
+}
+
+.uploadicon {
+	font-size: 120%;
+	margin-right: 10px;
+}
+.uploadButton {
+	color: #fff;
+    background-color: #ff1f00;
+}
+.upComplete {
+	color: #fff;
+	background-color: #376E37;
+}
+.errUpload {
+	color: #fff;
+	background-color: #000;
+}

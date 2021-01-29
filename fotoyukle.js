@@ -47,7 +47,7 @@ var errorMsg = "";
 		}
 			
 		function getPhoto(fileKey) {
-			var imgURL = 'https://'+bucketName+'.s3.'+bucketRegion+'.amazonaws.com/'+fileKey+';
+			var imgURL = 'https://'+bucketName+'.s3.'+bucketRegion+'.amazonaws.com/'+fileKey;
 			return imgURL;
 		}
 		

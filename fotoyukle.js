@@ -47,8 +47,8 @@ var errorMsg = "";
 		}
 			
 		function getPhoto(fileKey) {
-			var imgURL = '<img src="https://'+bucketName+'.s3.'+bucketRegion+'.amazonaws.com/'+fileKey+'">';
-			return imgURL
+			var imgURL = 'https://'+bucketName+'.s3.'+bucketRegion+'.amazonaws.com/'+fileKey+';
+			return imgURL;
 		}
 		
 		function makeInput() {
